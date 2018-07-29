@@ -37,9 +37,18 @@ public class Test {
         //sortowanie listy wg nazwy produktu
         sort(products, Warehouse.Comparators.NAME);
         // wyswietlanie zawartosci posortowanej listy
-        for (int i = 0; i < products.size(); i++) {
-            System.out.println(products.get(i).toString());
+        Formatter formatter = new Formatter();
+        //System.out.println(formatter.format("%10s %10s %10s", "Nazwa produktu", "Ilość", "Reprezentacja wizualna"));
+        /*for (int i = 0; i < products.size(); i++) {
+            System.out.println(formatter.format("%5s %5s %5s", products.get(i).getName(), products.get(i).getAmount(), products.get(i).starsToProducts()));
         }
+        */
+        int j = 0;
+        while(j < products.size()){
+            System.out.format("%10s %10s %10s\n", products.get(j).getName(), products.get(j).getAmount(), products.get(j).starsToProducts());
+            j++;
+        }
+
 
 
 
